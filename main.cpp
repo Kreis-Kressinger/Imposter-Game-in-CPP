@@ -1,3 +1,5 @@
+// Using GNU General Public License 2.0 or later
+
 
 #include <iostream>
 #include <cstdlib>
