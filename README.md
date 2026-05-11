@@ -63,12 +63,4 @@ In *Imposter* werden Spieler zufällig in zwei Rollen eingeteilt: **Imposter** u
   - 1. Hinweis
 - Kein zusätzlicher Text erlaubt.
 - Keine leeren Zeilen erlaubt.
-
-### 📄 Format Beispiel
-
-Wort1
-Hinweis1
-Wort2
-Hinweis2
-Wort3
-Hinweis3
+- Nach jedem Wort/Hinweis eine neue Zeile anfangen
