@@ -64,3 +64,4 @@ In *Imposter* werden Spieler zufällig in zwei Rollen eingeteilt: **Imposter** u
 - Kein zusätzlicher Text erlaubt.
 - Keine leeren Zeilen erlaubt.
 - Nach jedem Wort/Hinweis eine neue Zeile anfangen
+- Es ist ein Beispiel-Wortset bereits vorhanden
