@@ -144,7 +144,7 @@ lineNum++;
 
             std::string tempName;
 
-            std::cout << "Spieler(" << i + 1 << ") gebe deinen Namen ein: ";
+            std::cout << "Spieler(" << i + 1 << ") gib deinen Namen ein: ";
             std::cin >> tempName;
 
             player tempPlayer(imposterList.at(i), chosenWord, tempName);
@@ -290,7 +290,8 @@ lineNum++;
 }
 
 int main(){
-	std::cout << "************************"
+	std::cout 
+		  << '\n' << "************************"
 		  << '\n'
 		  << "Willkommen bei Imposter!"
 		  << '\n'
