@@ -252,7 +252,7 @@ lineNum++;
 	
 
 	if(innocentNumba <= imposterNumba){
-		std::cout << "****************************" << '\n' << "Die Imposter gewinnen, weil sie nun 50% der Spieler oder mehr sind." << '\n' << "****************************";
+		std::cout << '\n' << "****************************" << '\n' << "Die Imposter gewinnen, weil sie nun 50% der Spieler oder mehr sind." << '\n' << "****************************" << '\n';
 		for(int i = 0; i < listOfPlayers.size(); i++){
 		listOfPlayers.pop_back();
 		}
