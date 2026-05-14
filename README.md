@@ -1,3 +1,13 @@
+# Los geht's! – Getting started!
+
+ - Klone das Projekt. / Clone the repository.
+ - Kompiliere den Code in ```main.cpp``` in die ausführbare Datei ```imposter.exe``` (Windows und Linux)
+ ```
+    make
+    ./imposter.exe
+ ```
+
+
 # Spielregeln – Imposter
 
 In *Imposter* werden Spieler zufällig in zwei Rollen eingeteilt: **Imposter** und **normale Spieler**.
