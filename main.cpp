@@ -139,18 +139,24 @@ bool game() {
     int randomWordIndex = rand() % (wordList.size());
     std::string chosenWord = wordList.at(randomWordIndex);
 
+    std::cin.ignore(10000, '\n');
+
     for (int i = 0; i < playerNum; i++) {
 
 	std::string tempName;
 
 	std::cout << "Spieler(" << i + 1 << ") gib deinen Namen ein: ";
-	std::cin >> tempName;
+
+	std::getline(std::cin,tempName);
 
 	player tempPlayer(imposterList.at(i), chosenWord, tempName);
 	listOfPlayers.push_back(tempPlayer);
     }
 
-    int round = 0;
+/*
+ * unused variable
+ * int round = 0;
+ */
 
     while (true) {
 
@@ -182,7 +188,7 @@ bool game() {
 			<< p.getName() << " gewinnt, weil er/sie/es das richtige Wort erraten hat! Das Wort war: "
 			<< tempWord << '\n'
 			<< "*****************" << '\n';
-		    for(int i = 0; i < listOfPlayers.size(); i++){
+		    for(size_t i = 0; i < listOfPlayers.size(); i++){
 			listOfPlayers.pop_back();
 		    }
 		    char tempchar;
@@ -215,16 +221,17 @@ bool game() {
 	std::cout << '\n'
 	    << "Wollt ihr jetzt versuchen einen Imposter rauszuwaehlen oder zur Sicherheit noch eine Runde machen? (Y/N) ";
 	char choice;
-	while(!(std::cin >> choice) || toupper(choice) != 'Y' && toupper(choice) != 'N'){
-	    std::cin.clear();
-	    std::cin.ignore(10000, '\n');
+	while( !(std::cin >> choice)
+			||(toupper(choice) != 'Y' && toupper(choice) != 'N')){
+		std::cin.clear();
+		std::cin.ignore(10000, '\n');
 	}
 
 	if(toupper(choice) == 'Y'){
 
 	    int kickChoice;
 
-	    for(int i = 0; i < listOfPlayers.size(); i++){
+	    for(size_t i = 0; i < listOfPlayers.size(); i++){
 
 		std::cout << i+1 << ": " << listOfPlayers[i].getName() << '\n';
 
@@ -252,7 +259,7 @@ bool game() {
 
 		if(innocentNumba <= imposterNumba){
 		    std::cout << '\n' << "****************************" << '\n' << "Die Imposter gewinnen, weil sie nun 50% der Spieler oder mehr sind." << '\n' << "****************************" << '\n';
-		    for(int i = 0; i < listOfPlayers.size(); i++){
+		    for(size_t i = 0; i < listOfPlayers.size(); i++){
 			listOfPlayers.pop_back();
 		    }
 		    char tempchar;
@@ -268,7 +275,7 @@ bool game() {
 	    }
 	    if(allImpostersGone){
 		std::cout << "****************************" << '\n' << "Alle Imposter wurden gefasst. Die Anderen gewinnen!" << '\n' << "****************************";
-		for(int i = 0; i < listOfPlayers.size(); i++){
+		for(size_t i = 0; i < listOfPlayers.size(); i++){
 		    listOfPlayers.pop_back();
 		}
 		char tempchar;
